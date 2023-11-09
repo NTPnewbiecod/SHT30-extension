@@ -12,7 +12,7 @@ def read(addr=0x44):
         i2c1 = I2C(1, scl=Pin(5), sda=Pin(4), freq=100000)
     elif "KidMotor V4" in machine:
         i2c1 = I2C(0, scl=Pin(5), sda=Pin(4), freq=100000)
-    elif "Mbits" in machine:
+    elif ("Mbits" in machine) or ("OpenBIT" in machine):
         i2c1 = I2C(0, scl=Pin(21), sda=Pin(22), freq=100000)
     else:
         i2c1 = I2C(0, scl=Pin(22), sda=Pin(21), freq=100000)
