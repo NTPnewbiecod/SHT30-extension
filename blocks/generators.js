@@ -19,7 +19,7 @@ Blockly.JavaScript['sht30_read'] = function (block) {
     [
       'float ' + Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(uint8_t addr, uint8_t type) {',
       '  static ArtronShop_SHT3x * sht3x = NULL;',
-      '  static last_addr = 0;',
+      '  static uint8_t last_addr = 0;',
       '  if ((!sht3x) || (last_addr != addr)) {',
       '    if (sht3x) {',
       '      delete sht3x;',
