@@ -9,6 +9,7 @@ Blockly.Python['sht30_read'] = function (block) {
 };
 
 Blockly.JavaScript['sht30_read'] = function (block) {
+  Blockly.JavaScript.definitions_['include']['Wire.h'] = '#include <Wire.h>';
   Blockly.JavaScript.definitions_['include']['ArtronShop_SHT3x.h'] = '#include <ArtronShop_SHT3x.h>';
 
   var dropdown_addr = block.getFieldValue('addr');
