@@ -36,9 +36,6 @@ Blockly.JavaScript['sht30_read'] = function (block) {
       '}'
     ]);
 
-  var value_pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
-  var code = `${functionName}(${value_pin})`;
-
   var code = `${functionName}(${dropdown_addr}, ${dropdown_type})`;
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
