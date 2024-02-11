@@ -14,10 +14,10 @@ Blockly.JavaScript['sht30_read'] = function (block) {
   var dropdown_addr = block.getFieldValue('addr');
   var dropdown_type = block.getFieldValue('type');
 
-  var functionName = Blockly.Python.provideFunction_(
+  var functionName = Blockly.JavaScript.provideFunction_(
     'SHT30_read',
     [
-      'float ' + Blockly.Python.FUNCTION_NAME_PLACEHOLDER_ + '(uint8_t addr, uint8_t type) {',
+      'float ' + Blockly.JavaScript.FUNCTION_NAME_PLACEHOLDER_ + '(uint8_t addr, uint8_t type) {',
       '  static ArtronShop_SHT3x * sht3x = NULL;',
       '  static last_addr = 0;',
       '  if ((!sht3x) || (last_addr != addr)) {',
@@ -35,7 +35,7 @@ Blockly.JavaScript['sht30_read'] = function (block) {
       '}'
     ]);
 
-  var value_pin = Blockly.Python.valueToCode(block, 'pin', Blockly.Python.ORDER_ATOMIC);
+  var value_pin = Blockly.JavaScript.valueToCode(block, 'pin', Blockly.JavaScript.ORDER_ATOMIC);
   var code = `${functionName}(${value_pin})`;
 
   var code = `${functionName}(${dropdown_addr}, ${dropdown_type})`;
